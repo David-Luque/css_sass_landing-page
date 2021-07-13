@@ -39,9 +39,9 @@
         width: 33.333333%;
         display: table-cell;
 
-        // @include respond(phone) {
-        //     display: none;
-        // }
+        @include respond(tab-mid) {
+            display: none
+        }
     }
 
     &__right {
@@ -71,6 +71,11 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto; //important: set the page language in line " lang='en' " on the html file for the correct use of hyphens 
+        
+        @include respond(tab-mid) {
+            -moz-column-count: 1;
+            column-count: 1;
+        }
     }
 
     //OPEN STATES
